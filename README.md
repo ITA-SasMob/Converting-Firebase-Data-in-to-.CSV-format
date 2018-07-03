@@ -1,2 +1,82 @@
 # Converting-Firebase-Data-in-to-.CSV-format
 Create and Download Firebase Realtime Database Data in .CSV file 
+
+#Current Process:
+
+Google Firebase cloud Realtime Database stores the information in JSON (Java Script Object Notation) format – Which may not be usable format for the end users. 
+There is no direct tools/ technology available to extract and download the Firebase JSON Data to a more readable CSV Format.
+
+#ITA SAS Mobile Solution: “Dynamic Download of Firebase JSON data to CSV”
+
+ ITA SAS Mobile Built a Dynamic configurable solution to enable the following:
+
+•	Allow the users to configure on a simple configuration file the information user want to download from firebase.
+•	Application automatically generate the UI Screens in table format for visualizing the data from firebase on the web screen.
+•	Application automatically generated download option on Web UI Screen to download the firebase data in CSV format.
+•	User can control at Individual Table level and Field level information they wanted to download using the dynamic configuration option.
+
+#Technology Stack:
+This open source project was developed using AngularJS with HTML, CSS and JS. 
+#Steps for the App setup:
+Below steps explains option to configure the application on “Firebase Hosting”.
+•	Step-1: Download the source code.
+•	Step-2: Configure the JSON Configuration file 
+•	Step-3: Deploy the application on Firebase Hosting.
+Find the detailed information on each step below
+##Step-1: Download
+You can download the source code from the current Git Repository 
+##Step-2: Configuring JSON file
+a.	Setting up your firebase information 
+In scr/app/app.module.ts
+replace below red coloured constants with your firebase keys
+export const firebaseConfig = {
+  apiKey: "AIzaSyBYQ379YPaNXXXXXXXXXXXXXXXXXXX",
+  authDomain: "task2-fd8ad.firebaseapp.com",
+  databaseURL: "https://task2-fd8ad.firebaseio.com",
+  projectId: "task2-fd8ad",
+  storageBucket: "task2-fd8ad.appspot.com",
+  messagingSenderId: "420003144879"
+}
+( Above code will help you to  link with firebase )
+
+
+b.	Setup Table name(s) and field Names
+In scr/assets/data/firebaseData.json 
+{
+    "firebasetable1":
+    {
+    "firebasedb": "the firebase db to which you need to connect",
+    "categoryName": "This will be displayed on the web site",
+    "firebaseTable":"firebase database table name",      
+    "field1": "field name which you want download from Firebase",
+    "field2": "field name which you want download from Firebase",
+    "field3": field name which you want download from Firebase",
+    }
+  }
+** The sequence should in same format 
+Sample 
+{
+    "firebasetable1":
+    {
+    "firebasedb": "http://firebase",
+    "categoryName": "list of all schools",
+    "firebaseTable":"schools",      
+    "field1": "schoolname",
+    }
+  }
+
+
+##Step-3: Firebase deploy and hosting 
+	Please refer the firebase documentation for firebase hosting
+•	https://firebase.google.com/docs/hosting/deploying
+•	https://firebase.google.com/docs/hosting/quickstart
+
+Open source License:
+-	Open Source License Agreement - The MIT License
+
+-	Copyright (c) 2018 ITA(Information Technology Authority), Govt of Oman, Sultanate of Oman.
+-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+-	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
