@@ -1,48 +1,47 @@
-# Converting-Firebase-Data-in-to-.CSV-format
+## Converting-Firebase-Data-in-to-.CSV-format
 Create and Download Firebase Realtime Database Data in .CSV file 
 
-# Current Process:
+## Current Process:
 
 Google Firebase cloud Realtime Database stores the information in JSON (Java Script Object Notation) format – Which may not be usable format for the end users.<br /> 
 There is no direct tools/ technology available to extract and download the Firebase JSON Data to a more readable CSV Format.
 
-# ITA SAS Mobile Solution: “Dynamic Download of Firebase JSON data to CSV”
+## ITA SAS Mobile Solution: “Dynamic Download of Firebase JSON data to CSV”
 
  ITA SAS Mobile Built a Dynamic configurable solution to enable the following
 
-•Allow the users to configure on a simple configuration file the information user want to download from firebase.
-•Application automatically generate the UI Screens in table format for visualizing the data from firebase on the web screen.
-•Application automatically generated download option on Web UI Screen to download the firebase data in CSV format.
-•User can control at Individual Table level and Field level information they wanted to download using the dynamic configuration option.
+Allow the users to configure on a simple configuration file the information user want to download from firebase.
+- Application automatically generate the UI Screens in table format for visualizing the data from firebase on the web screen.
+- Application automatically generated download option on Web UI Screen to download the firebase data in CSV format.
+- User can control at Individual Table level and Field level information they wanted to download using the dynamic configuration option.
 
-# Technology Stack:
+## Technology Stack:
 This open source project was developed using AngularJS with HTML, CSS and JS. 
 
-# Steps for the App setup:
-Below steps explains option to configure the application on “Firebase Hosting”.
-	Step-1: Download the source code.<br />
-	Step-2: Configure the JSON Configuration file <br />
-	Step-3: Deploy the application on Firebase Hosting.<br />
+## Steps for the App setup:
+Below steps explains option to configure the application on “Firebase Hosting”.<br />
+	* Step-1: Download the source code.
+	* Step-2: Configure the JSON Configuration file 
+	* Step-3: Deploy the application on Firebase Hosting.<br />
 Find the detailed information on each step below
 
-## Step-1: Download
+### Step-1: Download
 You can download the source code from the current Git Repository 
-## Step-2: Configuring JSON file
-a.Setting up your firebase information <br />
+### Step-2: Configuring JSON file
+a. Setting up your firebase information <br />
 	In scr/app/app.module.ts
 	replace below red coloured constants with your firebase keys<br />
 	export const firebaseConfig = {<br />
-	  apiKey: "- ![#f03c15](AIzaSyBYQ379YPaNXXXXXXXXXXXXXXXXXXX")`#f03c15`,<br />
-	  authDomain: "- ![#f03c15](task2-fd8ad.firebaseapp.com)`#f03c15`",<br />
-	  databaseURL: "- ![#f03c15](https://task2-fd8ad.firebaseio.com)`#f03c15`",<br />
-	  projectId: "- ![#f03c15](task2-fd8ad)`#f03c15`",<br />
-	  storageBucket: "- ![#f03c15](task2-fd8ad.appspot.com)`#f03c15`",<br />
-	  messagingSenderId: "- ![#f03c15](420003144879)`#f03c15`"<br />
+  		apiKey: "AIzaSyBYQ379YPaNXXXXXXXXXXXXXXXXXXX",<br />
+ 		authDomain: "task2-fd8ad.firebaseapp.com",<br />
+  		databaseURL: "https://task2-fd8ad.firebaseio.com",<br />
+  		projectId: "task2-fd8ad",<br />
+  		storageBucket: "task2-fd8ad.appspot.com",<br />
+  		messagingSenderId: "420003144879"<br />
 	}<br />
-	( Above code will help you to  link with firebase )<br />
+	( Above code will help you to  link with firebase )
 
-
-b.Setup Table name(s) and field Names<br />
+b. Setup Table name(s) and field Names<br />
 	In scr/assets/data/firebaseData.json <br />
 	{<br />
 	    "firebasetable1":<br />
@@ -56,7 +55,7 @@ b.Setup Table name(s) and field Names<br />
 	    }<br />
 	  }<br />
 	** The sequence should in same format <br />
-## Sample 
+### Sample 
 	{
 	    "firebasetable1":
 	    {
@@ -68,7 +67,7 @@ b.Setup Table name(s) and field Names<br />
 	  }
 
 
-## Step-3: Firebase deploy and hosting 
+### Step-3: Firebase deploy and hosting 
 	Please refer the firebase documentation for firebase hosting
 	•https://firebase.google.com/docs/hosting/deploying
 	•https://firebase.google.com/docs/hosting/quickstart
