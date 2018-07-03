@@ -1,0 +1,58 @@
+page-home {
+    .headerSection{
+        margin-left: 2%;
+    }
+        .logoPic{
+            width: 100px;
+        }
+        .headerTitle{
+            padding-top: 2%;
+        }
+        // .outputArea{
+        //     position: relative;
+        //     width: 100%;
+        // }
+     .viewTable{
+        //  width: 100%;
+       text-align: center;
+    //    position: absolute;
+       right: 0;
+       left: 0;
+       margin: 3% auto; 
+     }
+
+    .gridGrow {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;  
+      margin: auto;  
+    }
+
+    .gridCol{
+      width: 20%;
+      height: auto;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+      padding: 0 0 20px 0;
+      position: relative;
+      }
+      .cardContent{
+        margin: auto;
+        color: purple;
+    }
+    
+    .cardContent title{     
+         font-size: 30px;
+        color: black; 
+      }
+      
+      .cardContent{
+       padding: 6px 0 0;
+       color: black;
+      }
+    
+    }

@@ -1,0 +1,31 @@
+
+<ion-content padding>
+  <ion-grid class="headerSection">
+    <ion-row>
+      <ion-col>
+          <img   align="center" src="../../assets/imgs/e-Oman.png" class="logoPic">
+      </ion-col>
+      <ion-col col-11>
+          <h1 class="headerTitle">Firebase Excel Download</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+  <div class="gridGrow" align="center">
+    <ion-card *ngFor="let data of cardsTitle" class="gridCol">
+      <ion-card-content class="cardContent">
+        <p class="cardContent" style="color:black">
+          <b>{{data}}</b>
+        </p>
+        <button ion-button (click)="D_ViewList(data)">View</button>
+        <br/>
+        <button ion-button (click)="D_DownnoadExcel(data)">Download</button>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+  <div class="gridGrow">
+  <div align="center" class="viewTable" id="box"></div>
+</div>
+</ion-content>

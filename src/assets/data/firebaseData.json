@@ -1,0 +1,52 @@
+{
+    "firebasetable1":
+    {
+    "firebasedb": "http://firebase",
+    "categoryName": "list of all schools",
+    "firebaseTable":"schools",      
+    "field1": "schoolname",
+    "field2": "schoolType",
+    "field3": "language",
+    "field4": "gender",
+    "field5": "governorate",
+    "field6": "willaya",
+    "field7": "city",
+    "field8": "noOfClassesInG4",
+    "field9": "noOfClassesInG8"
+    },
+    "firebasetable2":
+    {
+    "firebasedb": "http://firebase",
+    "categoryName": "Student Table",
+    "firebaseTable":"students",      
+    "field1": "firstname",
+    "field2": "familyname",
+    "field3":"SchoolId",
+    "field4": "username",
+    "field5": "userId",
+    "field6": "classId"
+    },
+    "firebasetable3":
+    {
+    "firebasedb": "http://firebase",
+    "categoryName": "Class Table",
+    "firebaseTable":"class",      
+    "field1": "class",
+    "field2": "classId",
+    "field3":"grade"
+    }
+    ,
+    "firebasetable4":
+    {
+    "firebasedb": "http://firebase",
+    "categoryName": "Student Table",
+    "firebaseTable":"students",      
+    "field1": "firstname",
+    "field2": "familyname",
+    "field3":"SchoolId",
+    "field4": "username",
+    "field5": "userId",
+    "field6": "classId"
+    }
+    
+  }

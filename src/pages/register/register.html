@@ -1,0 +1,54 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="content2">
+  
+    <div class="content3">
+      <ion-grid>
+
+        <ion-row align="center">
+          <ion-col>
+            <p class="appName" align="center">Register</p>
+            <br/>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-1>
+            <ion-icon name="ios-mail" class="icon1"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <input type="email" placeholder="Email" [(ngModel)]="email" class="inp1">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-1>
+            <ion-icon name="md-key" class="icon1"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <input type="password" placeholder="Password" [(ngModel)]="password" class="inp1">
+
+          </ion-col>
+        </ion-row> 
+ 
+      </ion-grid>
+      <p align="center">
+        <button  ion-button round style="background-color: rgb(233, 189, 199)" (click)="register(data)" class="registerButton">Register</button>
+      </p>
+      <p align="center">
+        <button ion-button clear (click)="gotologin()" class="button2">You have An account?</button></p>
+    </div>
+  </div>
+</ion-content>
