@@ -20,10 +20,11 @@ This open source project was developed using AngularJS with HTML, CSS and JS.
 
 # Steps for the App setup:
 Below steps explains option to configure the application on “Firebase Hosting”.
-	•Step-1: Download the source code.
-	•Step-2: Configure the JSON Configuration file 
-	•Step-3: Deploy the application on Firebase Hosting.
+	Step-1: Download the source code.
+	Step-2: Configure the JSON Configuration file 
+	Step-3: Deploy the application on Firebase Hosting.
 Find the detailed information on each step below
+
 ## Step-1: Download
 You can download the source code from the current Git Repository 
 ## Step-2: Configuring JSON file
