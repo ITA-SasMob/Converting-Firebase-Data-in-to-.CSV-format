@@ -17,13 +17,15 @@ import { AngularFireDatabaseModule} from 'angularfire2/database';
 import { AuthProvider } from '../providers/auth/auth';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyBYQ379YPaNNDZMbLtxaSvhN5OyitblaHk",
-  authDomain: "task2-fd8ad.firebaseapp.com",
-  databaseURL: "https://task2-fd8ad.firebaseio.com",
-  projectId: "task2-fd8ad",
-  storageBucket: "task2-fd8ad.appspot.com",
-  messagingSenderId: "420003144879"
+  apiKey: "AIzaSyCHaHCoZ3onZutScCdc174D50_0vPF7khA",
+    authDomain: "sasdevicemanagement.firebaseapp.com",
+    databaseURL: "https://sasdevicemanagement.firebaseio.com",
+    projectId: "sasdevicemanagement",
+    storageBucket: "",
+    messagingSenderId: "435864522075"
 }
+
+
 
 
 @NgModule({

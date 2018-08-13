@@ -2,51 +2,52 @@
     "firebasetable1":
     {
     "firebasedb": "http://firebase",
-    "categoryName": "list of all schools",
-    "firebaseTable":"schools",      
-    "field1": "schoolname",
-    "field2": "schoolType",
-    "field3": "language",
-    "field4": "gender",
-    "field5": "governorate",
-    "field6": "willaya",
-    "field7": "city",
-    "field8": "noOfClassesInG4",
-    "field9": "noOfClassesInG8"
+    "categoryName": "CenterDevices",
+    "firebaseTable":"CenterDevices",      
+    "field1": "availForIssue",
+    "field2": "deviceAssetID",
+    "field3": "deviceBarcode",
+    "field4": "deviceIMEI",
+    "field5": "deviceManufacturers",
+    "field6": "deviceName",
+    "field7": "issuedInfoFBKey"
+   
     },
     "firebasetable2":
     {
     "firebasedb": "http://firebase",
-    "categoryName": "Student Table",
-    "firebaseTable":"students",      
-    "field1": "firstname",
-    "field2": "familyname",
-    "field3":"SchoolId",
-    "field4": "username",
-    "field5": "userId",
-    "field6": "classId"
+    "categoryName": "Devices",
+    "firebaseTable":"IssuedDevices",      
+    "field1": "deviceBarCode",
+   "field2": "deviceIMEI",
+    "field3": "deviceName",
+    "field4": "isIssued",
+    "field5": "isReturned",
+    "field6": "issueDate",
+    "field7": "issued",
+    "field8": "returnSignature",
+    "field9": "returned",
+    "field10": "returnedBy",
+    "field11": "studentClassRoom",
+    "field12": "studentIDNumber",
+    "field13": "studentName",
+    "field14": "studentSignature",
+    "field15": "sued"
     },
     "firebasetable3":
     {
     "firebasedb": "http://firebase",
-    "categoryName": "Class Table",
-    "firebaseTable":"class",      
-    "field1": "class",
-    "field2": "classId",
-    "field3":"grade"
+    "categoryName": "Utilization",
+    "firebaseTable":"Utilization",      
+    "field1": "byOJP",
+    "field2": "byOthers",
+    "field3":"byStaff",
+    "field4": "tr1Utilization",
+    "field5":"tr2Utilization",
+    "field6": "tr3Utilization",
+    "field7": "tr4Utilization"
+
     }
-    ,
-    "firebasetable4":
-    {
-    "firebasedb": "http://firebase",
-    "categoryName": "Student Table",
-    "firebaseTable":"students",      
-    "field1": "firstname",
-    "field2": "familyname",
-    "field3":"SchoolId",
-    "field4": "username",
-    "field5": "userId",
-    "field6": "classId"
-    }
+    
     
   }

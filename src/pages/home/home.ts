@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { equals } from '../../../node_modules/typescript-collections/dist/lib/arrays';
 
 @Component({
   selector: 'page-home',
@@ -20,7 +21,6 @@ export class HomePage {
   allData = [];
   dataObject = { "title": "", "tableName": "", "dataArray": [] }
   firebaseData = []; //contain all the data required 
-
   fileTitle;
   jsonObject;
   csv;
@@ -186,8 +186,13 @@ Postcondition:   send the data with its header and file title to download excel 
             header = []
             // loop throw all the fields for the card [get the key for the firebase]
             for (let key in (this.allData[i].dataArray)) {
+              var finalField = snapshot[this.allData[i].dataArray[key]];
               // push only the data required in json file
-              firebaseArray.push(snapshot[this.allData[i].dataArray[key]])
+              if(key=="5"){ // Filed 5 would be "Time" 
+                finalField = finalField.replace(",","@"); 
+                //alert(finalField)
+              }
+              firebaseArray.push(finalField)
               // push the keys name in header 
               header.push(this.allData[i].dataArray[key])
             }
@@ -199,7 +204,6 @@ Postcondition:   send the data with its header and file title to download excel 
           // pass the data to be viewed in html page
           this.fileTitle = page; // or 'my-unique-title'
           this.exportCSVFile(header, this.firebaseData, this.fileTitle); // call the exportCSVFile() function to process the 
-
           //clear the array
           this.firebaseData = []
           //clear the header

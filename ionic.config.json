@@ -1,6 +1,8 @@
 {
-  "name": "squ",
-  "app_id": "",
+  "name": "convert",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
-  "integrations": {}
+  "app_id": ""
 }

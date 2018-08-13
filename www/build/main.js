@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 144:
+/***/ 183:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +13,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 144;
+webpackEmptyAsyncContext.id = 183;
 
 /***/ }),
 
-/***/ 186:
+/***/ 225:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -30,19 +30,19 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 186;
+webpackEmptyAsyncContext.id = 225;
 
 /***/ }),
 
-/***/ 233:
+/***/ 270:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__ = __webpack_require__(271);
 /*
 version :1
 Done By: Marwah Almaqbli
@@ -223,8 +223,13 @@ Postcondition:   view the data with its header as table in html page
                         header = [];
                         // loop throw all the fields for the card [get the key for the firebase]
                         for (var key in (_this.allData[i].dataArray)) {
+                            var finalField = snapshot[_this.allData[i].dataArray[key]];
                             // push only the data required in json file
-                            firebaseArray.push(snapshot[_this.allData[i].dataArray[key]]);
+                            if (key == "5") {
+                                finalField = finalField.replace(",", "@");
+                                //alert(finalField)
+                            }
+                            firebaseArray.push(finalField);
                             // push the keys name in header 
                             header.push(_this.allData[i].dataArray[key]);
                         }
@@ -300,7 +305,7 @@ source code : https://codepen.io/danny_pule/pen/WRgqNx
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\User\Desktop\SQU Resuable\download Excel\src\pages\home\home.html"*/'\n<ion-content padding>\n  <ion-grid class="headerSection">\n    <ion-row>\n      <ion-col>\n          <img   align="center" src="../../assets/imgs/e-Oman.png" class="logoPic">\n      </ion-col>\n      <ion-col col-11>\n          <h1 class="headerTitle">Firebase Excel Download</h1>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  \n\n  <div class="gridGrow" align="center">\n    <ion-card *ngFor="let data of cardsTitle" class="gridCol">\n      <ion-card-content class="cardContent">\n        <p class="cardContent" style="color:black">\n          <b>{{data}}</b>\n        </p>\n        <button ion-button (click)="D_ViewList(data)">View</button>\n        <br/>\n        <button ion-button (click)="D_DownnoadExcel(data)">Download</button>\n      </ion-card-content>\n    </ion-card>\n\n  </div>\n  <div class="gridGrow">\n  <div align="center" class="viewTable" id="box"></div>\n</div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\User\Desktop\SQU Resuable\download Excel\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/Malli/ITA/Workspace/Hybrid/FirebaseToExcel/src/pages/home/home.html"*/'<ion-content padding>\n  <ion-grid class="headerSection">\n    <ion-row>\n      <ion-col>\n        <img align="center" src="../../assets/imgs/e-Oman.png" class="logoPic">\n      </ion-col>\n      <ion-col col-11>\n        <h1 class="headerTitle">Firebase Excel Download</h1>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n\n  <div class="gridGrow" align="center">\n    <ion-card *ngFor="let data of cardsTitle" class="gridCol">\n      <ion-card-content class="cardContent">\n        <p class="cardContent" style="color:black">\n          <b>{{data}}</b>\n        </p>\n        <button ion-button (click)="D_ViewList(data)">View</button>\n        <br/>\n        <button ion-button (click)="D_DownnoadExcel(data)">Download</button>\n      </ion-card-content>\n    </ion-card>\n\n  </div>\n  <div class="gridGrow">\n    <div align="center" class="viewTable" id="box"></div>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/Malli/ITA/Workspace/Hybrid/FirebaseToExcel/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__["a" /* AngularFireDatabase */]])
     ], HomePage);
@@ -311,13 +316,13 @@ source code : https://codepen.io/danny_pule/pen/WRgqNx
 
 /***/ }),
 
-/***/ 284:
+/***/ 282:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(405);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -325,26 +330,26 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 303:
+/***/ 405:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export firebaseConfig */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(356);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(233);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_register_register__ = __webpack_require__(437);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angularfire2_auth__ = __webpack_require__(282);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_angularfire2_database__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_auth_auth__ = __webpack_require__(442);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(454);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(461);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_register_register__ = __webpack_require__(479);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angularfire2_auth__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_angularfire2_database__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_auth_auth__ = __webpack_require__(484);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -366,12 +371,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var firebaseConfig = {
-    apiKey: "AIzaSyBYQ379YPaNNDZMbLtxaSvhN5OyitblaHk",
-    authDomain: "task2-fd8ad.firebaseapp.com",
-    databaseURL: "https://task2-fd8ad.firebaseio.com",
-    projectId: "task2-fd8ad",
-    storageBucket: "task2-fd8ad.appspot.com",
-    messagingSenderId: "420003144879"
+    apiKey: "AIzaSyCHaHCoZ3onZutScCdc174D50_0vPF7khA",
+    authDomain: "sasdevicemanagement.firebaseapp.com",
+    databaseURL: "https://sasdevicemanagement.firebaseio.com",
+    projectId: "sasdevicemanagement",
+    storageBucket: "",
+    messagingSenderId: "435864522075"
 };
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -415,16 +420,16 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 356:
+/***/ 461:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(270);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -451,7 +456,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\User\Desktop\SQU Resuable\download Excel\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Users\User\Desktop\SQU Resuable\download Excel\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/Malli/ITA/Workspace/Hybrid/FirebaseToExcel/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/Malli/ITA/Workspace/Hybrid/FirebaseToExcel/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -462,13 +467,13 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 437:
+/***/ 479:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(77);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -497,7 +502,7 @@ var RegisterPage = /** @class */ (function () {
     };
     RegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"C:\Users\User\Desktop\SQU Resuable\download Excel\src\pages\register\register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="content2">\n  \n    <div class="content3">\n      <ion-grid>\n\n        <ion-row align="center">\n          <ion-col>\n            <p class="appName" align="center">Register</p>\n            <br/>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-1>\n            <ion-icon name="ios-mail" class="icon1"></ion-icon>\n          </ion-col>\n          <ion-col>\n            <input type="email" placeholder="Email" [(ngModel)]="email" class="inp1">\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-1>\n            <ion-icon name="md-key" class="icon1"></ion-icon>\n          </ion-col>\n          <ion-col>\n            <input type="password" placeholder="Password" [(ngModel)]="password" class="inp1">\n\n          </ion-col>\n        </ion-row> \n \n      </ion-grid>\n      <p align="center">\n        <button  ion-button round style="background-color: rgb(233, 189, 199)" (click)="register(data)" class="registerButton">Register</button>\n      </p>\n      <p align="center">\n        <button ion-button clear (click)="gotologin()" class="button2">You have An account?</button></p>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\User\Desktop\SQU Resuable\download Excel\src\pages\register\register.html"*/,
+            selector: 'page-register',template:/*ion-inline-start:"/Users/Malli/ITA/Workspace/Hybrid/FirebaseToExcel/src/pages/register/register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="content2">\n  \n    <div class="content3">\n      <ion-grid>\n\n        <ion-row align="center">\n          <ion-col>\n            <p class="appName" align="center">Register</p>\n            <br/>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-1>\n            <ion-icon name="ios-mail" class="icon1"></ion-icon>\n          </ion-col>\n          <ion-col>\n            <input type="email" placeholder="Email" [(ngModel)]="email" class="inp1">\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-1>\n            <ion-icon name="md-key" class="icon1"></ion-icon>\n          </ion-col>\n          <ion-col>\n            <input type="password" placeholder="Password" [(ngModel)]="password" class="inp1">\n\n          </ion-col>\n        </ion-row> \n \n      </ion-grid>\n      <p align="center">\n        <button  ion-button round style="background-color: rgb(233, 189, 199)" (click)="register(data)" class="registerButton">Register</button>\n      </p>\n      <p align="center">\n        <button ion-button clear (click)="gotologin()" class="button2">You have An account?</button></p>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/Malli/ITA/Workspace/Hybrid/FirebaseToExcel/src/pages/register/register.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
     ], RegisterPage);
@@ -508,13 +513,13 @@ var RegisterPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 442:
+/***/ 484:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__ = __webpack_require__(280);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -560,5 +565,5 @@ var AuthProvider = /** @class */ (function () {
 
 /***/ })
 
-},[284]);
+},[282]);
 //# sourceMappingURL=main.js.map
