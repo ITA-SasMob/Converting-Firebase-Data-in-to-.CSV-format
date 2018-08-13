@@ -17,12 +17,12 @@ import { AngularFireDatabaseModule} from 'angularfire2/database';
 import { AuthProvider } from '../providers/auth/auth';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyCHaHCoZ3onZutScCdc174D50_0vPF7khA",
-    authDomain: "sasdevicemanagement.firebaseapp.com",
-    databaseURL: "https://sasdevicemanagement.firebaseio.com",
+  apiKey: "AIzaSyCHaHCoZ3onXXXXXXXXXXXXXXXXXXX",
+    authDomain: "abcmanagment.firebaseapp.com",
+    databaseURL: "https://abcmanagment.firebaseio.com",
     projectId: "sasdevicemanagement",
     storageBucket: "",
-    messagingSenderId: "435864522075"
+    messagingSenderId: "123456789101"
 }
 
 
