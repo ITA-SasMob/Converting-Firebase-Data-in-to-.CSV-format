@@ -19,6 +19,11 @@ Allow the users to configure on a simple configuration file the information user
 ## Technology Stack:
 This open source project was developed using AngularJS with HTML, CSS and JS. 
 
+## Platform Setup:
+* Verify current version of your Angular, application required angular 4 and above
+* It is an ionic project so install npm ionic angular to import all the libraries that are required in ts files in any ionic project to run the code.
+
+
 ## Steps for the App setup:
 Below steps explains option to configure the application on “Firebase Hosting”.<br />
 	* Step-1: Download the source code.
