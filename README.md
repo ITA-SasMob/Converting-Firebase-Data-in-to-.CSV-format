@@ -22,6 +22,7 @@ This open source project was developed using AngularJS with HTML, CSS and JS.
 ## Platform Setup:
 * Verify current version of your Angular, application required angular 4 and above
 * It is an ionic project so install npm ionic angular to import all the libraries that are required in ts files in any ionic project to run the code.
+* if are getting any angular errors please run a command <b>npm install ionic-angular@latest --save<b/>
 
 
 ## Steps for the App setup:
@@ -36,7 +37,7 @@ You can download the source code from the current Git Repository
 ### Step-2: Configuring JSON file
 a. Setting up your firebase information <br />
 	In scr/app/app.module.ts
-	replace below red coloured constants with your firebase keys<br />
+	replace below  constants with your firebase keys<br />
 	export const firebaseConfig = {<br />
   		apiKey: "AIzaSyBYQ379YPaNXXXXXXXXXXXXXXXXXXX",<br />
  		authDomain: "task2-fd8ad.firebaseapp.com",<br />
