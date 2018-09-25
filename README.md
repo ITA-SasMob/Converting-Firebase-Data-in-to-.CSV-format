@@ -17,7 +17,7 @@ Allow the users to configure on a simple configuration file the information user
 - User can control at Individual Table level and Field level information they wanted to download using the dynamic configuration option.
 
 ## Technology Stack:
-This open source project was developed using AngularJS with HTML, CSS and JS. 
+This open source project was developed using Angular with HTML, CSS and JS. 
 
 ## Platform Setup:
 * Verify current version of your Angular, application required angular 4 and above
